@@ -37,3 +37,38 @@ const generateRange = (min, max, step) => {
 
 console.log('задача 12: ' + generateRange(2, 10, 2))
 
+// 13
+// Написать функцию, которая возвращает x в степени n.
+//     Иначе говоря, умножает x на себя n раз и возвращает результат.
+// // (3, 2) → 3 * 3 = 9, (3, 3) → 3 * 3 * 3 = 27
+
+const power = (x, n) => {
+    return x**n
+}
+
+console.log('задача 13: ' + power(3, 2))
+
+// 14
+// сгенерировать num чисел до 100 и отсортировать их
+// в порядке возрастания
+
+const random = (num) => {
+    const arr = []
+    for (let i = 0; i < num; i++) {
+        arr.push(Math.round(Math.random()*100+1))
+    }
+    return arr.sort((a, b) => a - b)
+}
+
+console.log('задача 14: ' + random(12))
+
+// 15
+// Напиши функцию, которая в массиве чисел находит и
+// возвращает наименьшее число.
+//     [94, 2, 71, 10, 22, 71] —>  2
+
+const minNum = (arr) => {
+    return Math.min(...arr)
+}
+
+console.log('задача 15: ' + minNum([94, 2, 71, 10, 22, 71]))
