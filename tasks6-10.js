@@ -52,3 +52,16 @@ const deleteDuplicates = (str) => {
 }
 
 console.log('задача 9: ' + deleteDuplicates('dsf xxx xxx sd'))
+
+// Задача 10
+// Напишите функцию change_register(str), которая принимает
+// в качестве аргумента строку и и заменяет регистр каждого
+// символа на противоположный. Например, если вводится «КаЖдЫй ОхОтНиК»,
+// то на выходе должно быть «кАжДыЙ оХоТнИк».
+
+const changeRegister = (str) => {
+    return str.replace(/./g, letter => letter === letter.toUpperCase() ? letter.toLowerCase() : letter.toUpperCase()
+    )
+}
+
+console.log('задача 10: ' + changeRegister('КаЖдЫй ОхОтНиК'))
