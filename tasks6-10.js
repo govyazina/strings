@@ -32,3 +32,23 @@ const getSumFromString = (str) => {
 }
 
 console.log('задача 8: ' + getSumFromString('hfh 34jkj   2 lkll80'))
+
+// Задача 9
+// Удалите одной регуляркой все повторяющиеся слова из строки,
+//     например для 'dsf xxx xxx sd' должно вернуть 'dsf xxx sd'.
+
+const deleteDuplicates = (str) => {
+    const obj = {}
+    return str.replace(/\w+/g, el => {
+        if (obj[el]) {
+            obj[el]++
+            return ''
+        }
+        else {
+            obj[el] = 1
+            return el
+        }
+    }).replace(/\s+/g, ' ')
+}
+
+console.log('задача 9: ' + deleteDuplicates('dsf xxx xxx sd'))
