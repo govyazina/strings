@@ -18,7 +18,17 @@ console.log('задача 6: ' + getSubstrings('ahb acb aeb aeeb adcb axeb'))
 // mail@yandex.ru.
 
 const checkEmail = (email) => {
-    return email.match(/[-.\w]+@([\w-]+\.)+[\w-]+/g) ? email + ' ok' : email + ' not ok. check it!'
+    return email.match(/^[-.\w]+@([\w-]+\.)+[\w-]+$/g) ? email + ' ok' : email + ' not ok. check it!'
 }
 
-console.log('задача 7: ' + checkEmail('my_mail123@mail.ru'))
+console.log('задача 7: ' + checkEmail('my_mail 123@mail.ru'))
+
+// Задача 8
+// Дана строка с буквами, пробелами и цифрами.
+//     Найдите сумму всех чисел из данной строки.
+
+const getSumFromString = (str) => {
+    return str.match(/\d+/g).reduce((acc, el) => acc + Number(el),0)
+}
+
+console.log('задача 8: ' + getSumFromString('hfh 34jkj   2 lkll80'))
