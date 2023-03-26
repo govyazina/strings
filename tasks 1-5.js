@@ -50,4 +50,15 @@ const threeDots = (str, n) => {
     return result
 }
 
-console.log('задача 3: ' + threeDots('Дана переменная str, в которой хранится какой-либо текст.', 25))
+console.log('задача 4: ' + threeDots('Дана переменная str, в которой хранится какой-либо текст.', 25))
+
+// Задача 5
+// Преобразуйте первую букву каждого слова строки в верхний регистр.
+// ПРИМЕР
+// ("привет! я хороший человек") -> Привет! Я Хороший Человек"
+
+const setUpperCaseLetter = (str) => {
+    return str.split(' ').map(word => word = word[0].toUpperCase() + word.slice(1)).join(' ')
+}
+
+console.log('задача 5: ' + setUpperCaseLetter("привет! я хороший человек"))
